@@ -1,16 +1,16 @@
 
 import './Product.css'
 
-function Product() {
+function Product(props) {
     return ( 
      <div>
         <h2>Product Card</h2>
         <div className="card">
-            <img src="A51.png"/>
-            <h1>Samsung A51</h1>
-            <p className="price">$300</p>
-            <p>It is the best smart phone for 2021</p>
-            <p><button>Add To Cart</button></p>
+            <img src={props.img}/>
+            <h1>{props.name}</h1>
+            <p className="price">{props.price}</p>
+            <p className='details'>{props.detail}</p>
+            <button>Add To Cart</button>
         </div>
      </div>   
     )
